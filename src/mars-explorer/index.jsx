@@ -7,6 +7,10 @@ import MarsExplorerRoutes from "mars-explorer/routes";
 
 const RootStyles = styled.div`
   font-family: sans-serif;
+  ul {
+    list-style: none;
+    padding: 0;
+  }
 `;
 
 const MarsExplorer = () => (

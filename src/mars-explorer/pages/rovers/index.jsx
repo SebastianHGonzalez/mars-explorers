@@ -1,25 +1,23 @@
 import React, { Fragment, useEffect } from "react";
 import { connect } from "react-redux";
-import { actions, selectors } from "mars-explorer/ducks";
 
-const Rovers = ({ fetch, fetching, rovers }) => {
+import { actions, selectors } from "mars-explorer/ducks";
+import RoversListItem from "mars-explorer/pages/rovers/RoversListItem";
+
+const Rovers = ({ fetch, fetching, rovers, onClick }) => {
   useEffect(fetch, [fetch]);
 
   return (
     <Fragment>
-      {rovers.map(rover => (
-        <div>
-          <h2>
-            Rover: <span>{rover.name}</span>
-          </h2>
-          <h3>
-            status: <span>{rover.status}</span>
-          </h3>
-          <h4>
-            Photos taken: <span>{rover.total_photos}</span>
-          </h4>
-        </div>
-      ))}
+      <ul>
+        {rovers.map(rover => (
+          <RoversListItem
+            key={rover.id}
+            {...rover}
+            onClick={() => onClick(rover)}
+          />
+        ))}
+      </ul>
     </Fragment>
   );
 };
@@ -33,6 +31,9 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
   return {
+    onClick: rover => {
+      console.log(rover);
+    },
     fetch: () => {
       dispatch(actions.rovers.fetch.request());
     }

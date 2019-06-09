@@ -5,8 +5,7 @@ import { NASA_BASE_URL, NASA_API_KEY } from "mars-explorer/config";
 import schema from "mars-explorer/api/schemas";
 
 const axios = create({
-  baseURL: NASA_BASE_URL,
-  timeout: 1000
+  baseURL: NASA_BASE_URL
 });
 
 export const rovers = {
