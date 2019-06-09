@@ -1,5 +1,11 @@
-import React from "react";
+import React, { Fragment } from "react";
 
-const MarsExplorer = () => <div>mars-explorer</div>
+import MarsExplorerRoutes from "mars-explorer/routes";
+
+const MarsExplorer = () => (
+  <Fragment>
+    <MarsExplorerRoutes />
+  </Fragment>
+);
 
 export default MarsExplorer;
