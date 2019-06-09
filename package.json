@@ -10,8 +10,7 @@
     "react-router-dom": "^5.0.1",
     "react-scripts": "3.0.1",
     "redux": "^4.0.1",
-    "redux-saga": "^1.0.2",
-    "styled-components": "^4.3.1"
+    "redux-saga": "^1.0.2"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -38,6 +37,27 @@
   },
   "devDependencies": {
     "gh-pages": "^2.0.1",
+    "husky": "^2.4.0",
+    "lint-staged": "^8.2.0",
+    "prettier": "^1.18.2",
     "redux-devtools-extension": "^2.13.8"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "pre-push": "npm test"
+    }
+  },
+  "lint-staged": {
+    "linters": {
+      "src/**/*.{js,jsx,ts,tsx,json,css}": [
+        "prettier --write",
+        "eslint --fix src/",
+        "git add"
+      ]
+    },
+    "ignore": [
+      "**/dist/*.min.js"
+    ]
   }
 }
