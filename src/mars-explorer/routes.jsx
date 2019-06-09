@@ -16,7 +16,7 @@ const MarsExplorerRoutes = () => (
       <Route exact path="/" component={FeedPage} />
       <Route
         path="/"
-        render={() => <NotFound redirectTo="/" afterSeconds={5} />}
+        render={() => <NotFound redirectTo="/rovers" afterSeconds={5} />}
       />
     </Switch>
   </Router>
