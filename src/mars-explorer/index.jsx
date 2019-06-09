@@ -1,11 +1,13 @@
-import React, { Fragment } from "react";
+import React from "react";
+import { Provider } from "react-redux";
 
+import createStore from "mars-explorer/createStore";
 import MarsExplorerRoutes from "mars-explorer/routes";
 
 const MarsExplorer = () => (
-  <Fragment>
+  <Provider store={createStore()}>
     <MarsExplorerRoutes />
-  </Fragment>
+  </Provider>
 );
 
 export default MarsExplorer;
