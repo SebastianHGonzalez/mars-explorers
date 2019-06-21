@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.js": "/mars-explorer/static/js/main.53aeaaeb.chunk.js",
+    "main.js.map": "/mars-explorer/static/js/main.53aeaaeb.chunk.js.map",
+    "runtime~main.js": "/mars-explorer/static/js/runtime~main.afde51e1.js",
+    "runtime~main.js.map": "/mars-explorer/static/js/runtime~main.afde51e1.js.map",
+    "static/js/2.fb192a72.chunk.js": "/mars-explorer/static/js/2.fb192a72.chunk.js",
+    "static/js/2.fb192a72.chunk.js.map": "/mars-explorer/static/js/2.fb192a72.chunk.js.map",
+    "index.html": "/mars-explorer/index.html",
+    "precache-manifest.61a9ca11423d55940da9f7bfb6b7f94a.js": "/mars-explorer/precache-manifest.61a9ca11423d55940da9f7bfb6b7f94a.js",
+    "service-worker.js": "/mars-explorer/service-worker.js"
+  }
+}
